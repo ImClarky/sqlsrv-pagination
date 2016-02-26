@@ -1,6 +1,6 @@
 ###SQLSRV-Pagination Tutorial  
   
-This is a brief tutorial on how to get up and running using the SQLSRV-pagination plugin  
+This is a brief tutorial on how to get up and running using the SQLSRV-pagination plugin.  
 ***********
 
 ####Step 1 - Include `paginator.php` Class  
@@ -11,7 +11,7 @@ include 'path/to/paginator.php';
 ***********
 
 ####Step 2 - Initialise an Instance and Other Variables  
-We how have to initialise the `Paginator` class:
+We now have to initialise the `Paginator` class:
 ```php
 $paginator = new Paginator($conn, "dbo", "members", "lastname");
 ```
@@ -22,7 +22,7 @@ The Paginator constructor takes 4 parameters:
 3. `"members"` - This is your table name that you want to query
 4. `"lastname"` - This is the column that you want to order the results by
 
-There are also 2 variables that need to be defined. Those are: 
+There are also 2 variables that need to be defined. These are: 
 
 1. `$limit` - the maximum number of records on one page
 2. `$page` - the current page number
@@ -58,7 +58,7 @@ The `getDataSet()` function takes in 2 parameters. These are:
 1. `$limit`
 2. `$page`
 
-**Note:** The parametes have default values of `10` and `1` respectfully
+**Note:** The parameters have default values of `10` and `1` respectfully
 
 #####Important  
 In the `getDataSet()` function there are two lines (:96 and :97):
