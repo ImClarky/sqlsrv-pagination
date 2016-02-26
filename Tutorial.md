@@ -69,7 +69,7 @@ $results = $this->selectSection_Statement();
 ```
 
 These lines are for two different approaches. **Comment / delete one**.   
-If you use `selectSection_StoredProcedure()` please download and execute [sp_GetSectionFromTable.sql](https://github.com/ImClarky/SQLSRV-Pagination/blob/readme-edits/sp_GetSectionFromTable.sql) in SQL Server to create the required Stored Procedure.
+If you use `selectSection_StoredProcedure()` please download and execute [sp_GetSectionFromTable.sql](https://github.com/ImClarky/SQLSRV-Pagination/blob/masters/sp_GetSectionFromTable.sql) in SQL Server to create the required Stored Procedure.
 ***********
 ####Step 4 - Display Page Links
 Finally lets display those links:
@@ -106,7 +106,7 @@ The Page links will have something similar to the following HTML format:
 </div>
 ```
 
-You can edit create your own custom styling based around the classes used or you can use [the CSS provided in the Examples folder](https://github.com/ImClarky/SQLSRV-Pagination/blob/readme-edits/Examples/pagination.css)
+You can edit create your own custom styling based around the classes used or you can use [the CSS provided in the Examples folder](https://github.com/ImClarky/SQLSRV-Pagination/blob/master/Examples/pagination.css)
 
 ***********
 
@@ -114,4 +114,4 @@ You can edit create your own custom styling based around the classes used or you
 
 You should now have a fully-operating Pagination. If you used the provided css (link above) you should get [something looking like this](https://jsfiddle.net/imclarky/pn1joybp/) (link to JSFiddle).
 
-Have a look at the [Examples Folder](https://github.com/ImClarky/SQLSRV-Pagination/tree/readme-edits/Examples) for more examples of the plugin.
+Have a look at the [Examples Folder](https://github.com/ImClarky/SQLSRV-Pagination/tree/master/Examples) for more examples of the plugin.
