@@ -6,7 +6,7 @@ SQLSRV-Pagination is a simple pagination plugin for PHP using the SQLSRV extensi
 
 ####Requirements
 Not a lot at all:
-+ [SQLSRV extension for PHP](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
++ [SQLSRV extension for PHP](https://www.microsoft.com/en-us/download/details.aspx?id=20098) PHP 5.4+ required
 + [Microsoft ODBC Driver 11 for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=36434)
 + SQL Server 2008 R2 and above
   
