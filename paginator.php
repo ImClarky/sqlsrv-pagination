@@ -93,8 +93,8 @@ class Paginator {
     $this->_page = $page;
 
     // Two differnet methods. See functions for details
-    $results = $this->selectSection_StoredProcedure();
-    //$results = $this->selectSection_Statement();
+    //$results = $this->selectSection_StoredProcedure();
+    $results = $this->selectSection_Statement();
 
 
     $c = 0;
@@ -238,13 +238,13 @@ class Paginator {
     $q = "
       DECLARE @page int = ?, @limit int = ?
       SELECT * FROM
-				(SELECT *, ROW_NUMBER() over(ORDER BY [" . $this->_orderBy . "] DESC) as RowNum
-				FROM [" . $this->_schema . "].[" . $this->_table . "]
-				) as [table]
-			WHERE
-				[table].[RowNum] BETWEEN ((@page - 1) * @limit) + 1 AND @limit * (@page) 
-			ORDER BY
-				[" . $this->_orderBy . "] DESC";
+	(SELECT *, ROW_NUMBER() over(ORDER BY [" . $this->_orderBy . "] DESC) as RowNum
+	FROM [" . $this->_schema . "].[" . $this->_table . "]
+	) as [table]
+      WHERE
+	table].[RowNum] BETWEEN ((@page - 1) * @limit) + 1 AND @limit * (@page) 
+      ORDER BY
+	[" . $this->_orderBy . "] DESC";
 
     $result = sqlsrv_query($this->_con, $q, array(&$this->_page, &$this->_limit));
 
