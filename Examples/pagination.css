@@ -1,0 +1,50 @@
+.pagination {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.pagination a {
+  cursor: pointer;
+}
+
+a, a:hover{
+  text-decoration: none;
+}
+
+.pagination a span.page-num {
+  font-family: arial;
+  font-size: 14px;
+  display: inline;
+  padding: 5px 10px;
+  margin: 5px 3px;
+  border: 1px solid #ddd;
+  color: #888;
+  
+  transition: color .3s, background-color .3s, border .3s;
+}
+
+.pagination a span.selected {
+  color: #555;
+  background-color: #fc0;
+  border: 1px solid #fc0;
+}
+
+.pagination a span.page-num:hover {
+  color: #555;
+  background-color: #fc0;
+  border: 1px solid #fc0;
+}
+
+.pagination a span.dots, .pagination a span.dots:hover {
+  background-color: transparent;
+  color: #888;
+  border: 1px solid transparent;
+  cursor: default;
+}
+
+.pagination a span.disabled, .pagination a span.disabled:hover{
+  cursor: default;
+  color: #888;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+}
