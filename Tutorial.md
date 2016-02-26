@@ -3,14 +3,14 @@
 This is a brief tutorial on how to get up and running using the SQLSRV-pagination plugin  
 ***********
 
-#####Step 1 - Include `paginator.php` Class  
+####Step 1 - Include `paginator.php` Class  
 Firstly we must include the Class into our PHP file. Like so:
 ```php
 include 'path/to/paginator.php';
 ```
 ***********
 
-#####Step 2 - Initialise an Instance and Other Variables  
+####Step 2 - Initialise an Instance and Other Variables  
 We how have to initialise the `Paginator` class:
 ```php
 $paginator = new Paginator($conn, "dbo", "members", "lastname");
@@ -35,7 +35,7 @@ $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
 ```
 ***********
 
-#####Step 3 - Retrieve and Display Data
+####Step 3 - Retrieve and Display Data
 Now its time to display some data:
 
 ```php
@@ -59,8 +59,19 @@ The `getDataSet()` function takes in 2 parameters. These are:
 2. `$page`
 
 **Note:** The parametes have default values of `10` and `1` respectfully
+
+#####Important  
+In the `getDataSet()` function there are two lines (:96 and :97):
+
+```php
+$results = $this->selectSection_StoredProcedure();
+$results = $this->selectSection_Statement();
+```
+
+These lines are for two different approaches. **Comment / delete one**.   
+If you use `selectSection_StoredProcedure()` please download and execute [sp_GetSectionFromTable.sql](https://github.com/ImClarky/SQLSRV-Pagination/blob/readme-edits/sp_GetSectionFromTable.sql) in SQL Server to create the required Stored Procedure.
 ***********
-#####Step 4 - Display Page Links
+####Step 4 - Display Page Links
 Finally lets display those links:
 ```php
 echo $paginator->getPageLinks($links, $links_class);
@@ -70,14 +81,37 @@ The `getPageLinks()` function takes in 2 parameters. These are:
 
 1. `$links` - The number of links either side of the selected / active link  
   So for example `$links = 3` would look like:  
+
     [prev] [1] ... [4] [5] [6] **[7]** [8] [9] [10] ... [2451] [next]  
       
 2. `$links_class` - The CSS class name that the wrapper div around the links will have
 
 **Note:** The parametes have default values of `2` and `pagination` respectfully.
 
+The Page links will have something similar to the following HTML format:
+
+```html
+<div class="pagination">
+  <a href="?limit=15&page=9"><span class="page-num">prev</span></a>
+  <a href="?limit=15&page=1"><span class="page-num">1</span></a>
+  <a><span class="page-num dots">...</span></a>
+  <a href="?limit=15&page=8"><span class="page-num">8</span></a>
+  <a href="?limit=15&page=9"><span class="page-num">1</span></a>
+  <a href="?limit=15&page=10"><span class="page-num selected">10</span></a>
+  <a href="?limit=15&page=11"><span class="page-num">11</span></a>
+  <a href="?limit=15&page=12"><span class="page-num">12</span></a>
+  <a><span class="page-num dots">...</span></a>
+  <a href="?limit=15&page=2354"><span class="page-num">2354</span></a>
+  <a href="?limit=15&page=11"><span class="page-num">next</span></a>
+</div>
+```
+
+You can edit create your own custom styling based around the classes used or you can use [the CSS provided in the Examples folder](https://github.com/ImClarky/SQLSRV-Pagination/blob/readme-edits/Examples/pagination.css)
 
 ***********
 
-**That's it, we're done!**  
-You should now have a fully-operating Pagination system. Have a look at the [Examples Folder](https://github.com/ImClarky/SQLSRV-Pagination/tree/readme-edits/Examples) for more examples of the plugin.
+**That's it, we're done!**
+
+You should now have a fully-operating Pagination. If you used the provided css (link above) you should get [something looking like this](https://jsfiddle.net/imclarky/pn1joybp/) (link to JSFiddle).
+
+Have a look at the [Examples Folder](https://github.com/ImClarky/SQLSRV-Pagination/tree/readme-edits/Examples) for more examples of the plugin.
