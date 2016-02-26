@@ -20,7 +20,7 @@ All that is required in the code is:
 5. Page number
 6. Number of records per page
 
-See the [Tutorial]() for more details  
+See the [Tutorial](https://github.com/ImClarky/SQLSRV-Pagination/blob/readme-edits/Tutorial.md) for more details  
 
 ####Licence
 MIT Licence
