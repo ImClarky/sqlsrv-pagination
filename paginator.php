@@ -92,7 +92,7 @@ class Paginator {
     $this->_limit = $limit;
     $this->_page = $page;
 
-    // Two differnet methods. See functions for details
+    // Two differnet methods. See respective functions for details
     //$results = $this->selectSection_StoredProcedure();
     $results = $this->selectSection_Statement();
 
@@ -123,7 +123,7 @@ class Paginator {
    * Create HTML for page links
    * 
    * @param integer $links The maximum number of links either side of selected page. Example: $links = 3 would output - 1 ... 4 5 6 [7] 8 9 10 ... 23
-   * @param string $links_class Class applied to container div around links - Default: null
+   * @param string $links_class Class applied to container div around links - Default: pagination
    * @return string HTML string of links
    */
   public function getPageLinks($links = 2, $links_class = "pagination") {
