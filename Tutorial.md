@@ -69,7 +69,7 @@ $results = $this->selectSection_Statement();
 ```
 
 These lines are for two different approaches. **Comment / delete one**.   
-If you use `selectSection_StoredProcedure()` please download and execute [sp_GetSectionFromTable.sql](https://github.com/ImClarky/SQLSRV-Pagination/blob/masters/sp_GetSectionFromTable.sql) in SQL Server to create the required Stored Procedure.
+If you use `selectSection_StoredProcedure()` please download and execute [sp_GetSectionFromTable.sql](https://github.com/ImClarky/sqlsrv-pagination/blob/master/sp_GetSectionFromTable.sql) in SQL Server to create the required Stored Procedure.
 ***********
 ####Step 4 - Display Page Links
 Finally lets display those links:
