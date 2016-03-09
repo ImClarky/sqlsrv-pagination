@@ -112,6 +112,8 @@ You can edit create your own custom styling based around the classes used or you
 
 **That's it, we're done!**
 
-You should now have a fully-operating Pagination. If you used the provided css (link above) you should get [something looking like this](https://jsfiddle.net/imclarky/pn1joybp/) (link to JSFiddle).
+You should now have a fully-operating Pagination. If you used the provided css (link above) you should get something looking like this:
+
+![pagination](http://imgur.com/6cD79xf.png)
 
 Have a look at the [Examples Folder](https://github.com/ImClarky/SQLSRV-Pagination/tree/master/Examples) for more examples of the plugin.
